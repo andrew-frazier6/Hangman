@@ -1,3 +1,7 @@
+let submit = document.querySelector("button");
+let letterBox = document.querySelector(".letter-container");
+let input = document.querySelector("input");
+
 // random word chosen
 let randomWords = [
   "apple",
@@ -11,7 +15,23 @@ let randomWords = [
 var randomItem = randomWords[Math.floor(Math.random() * randomWords.length)];
 // the splitting of the chosen word into an array
 wordInPlay = randomItem.split("");
-alert(wordInPlay);
+console.log(wordInPlay);
+// chosen word turned into hyphens
+let wordLength = wordInPlay.length;
+console.log(wordLength);
+// displays underscore amount based on length of the word
+// displayedHiddenWord = [];
+
+for (let i = 0; i < wordLength; i++) {
+  let letterBlank = document.createElement("div");
+  letterBlank.classList.add("blank-style");
+  console.dir(letterBlank);
+  letterBox.appendChild(letterBlank);
+}
+
+// border bottom to divs created in order to display the underscore for the letters
+// find div to corresoping letter and then add that letter to div
+
 // characters to choose from for comparison
 let letters = [
   "a",
@@ -49,12 +69,10 @@ let wrongLetters = [];
 // when you hit submit you input what you typed in into the innerHTML of the
 // div box
 
-let button = document.querySelector("button");
-document.querySelector(".input") = input.value;
-let box = document.querySelector(".console-log");
+// submit.addEventListener("click", submitLetter);
 
-let inputRun = input.addEventListener("click", typeWord);
-
-function typeWord() {}
-
-console.log(input);
+// function submitLetter(e) {
+//   e.preventDefault();
+//  console.log(input)
+// }
+// //
