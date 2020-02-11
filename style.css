@@ -1,0 +1,40 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 15vh 66vh 15vh;
+}
+
+.header {
+  grid-row-start: 1;
+  /* border: solid black 2px; */
+  display: flex;
+  justify-content: center;
+}
+
+.main {
+  grid-row-start: 2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer {
+  grid-row-start: 3;
+  /* border: solid black 2px; */
+  display: flex;
+  flex-direction: row;
+}
+
+button {
+  height: 20px;
+  width: 60px;
+  border-radius: 90%;
+}
+
+.console-log {
+  border: black solid 2px;
+  height: 400px;
+  width: 600px;
+}
