@@ -83,24 +83,29 @@ let wrongLetters = new Set();
 let value;
 let item;
 submit.addEventListener("click", submitLetter);
+let correctLetter = false;
 
 function submitLetter(e) {
   e.preventDefault();
   singleLetter = input.value;
+  correctLetter = false;
   console.log(singleLetter);
-  wordInPlay.forEach(letter => {
-    if (singleLetter == letter) {
-      blankLetters.style.fontsize = "20px";
-    } else {
+  blankLetters.forEach((letter, i) => {
+    console.dir(letter);
+    if (singleLetter == letter.innerText) {
+      letter.style.fontSize = "20px";
+      input.value = "";
+      correctLetter = true;
+    } else if (i == blankLetters.length - 1 && correctLetter == false) {
       wrongLetters.add(singleLetter);
       value = "";
       for (item of wrongLetters.values()) {
         value += item + " ";
       }
       incorrectAnswer.innerText = value;
+      input.value = "";
     }
   });
-  input.value = "";
 }
 
 // let values = wrongLetters.values();
