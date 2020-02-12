@@ -73,26 +73,37 @@ blankDivs();
 //   "z"
 // ];
 // chosen letter from letters array
-let singleLetter = [];
+let singleLetter;
 // wrong letters chosen get pushed to the wrong letters array and then displayed in html
-let wrongLetters = [];
+
+let wrongLetters = new Set();
 
 // when you hit submit you input what you typed in into the innerHTML of the
 // div box
-
+let value;
+let item;
 submit.addEventListener("click", submitLetter);
 
 function submitLetter(e) {
   e.preventDefault();
-  singleLetter.push(input.value);
+  singleLetter = input.value;
   console.log(singleLetter);
   wordInPlay.forEach(letter => {
-    if (singleLetter[0] == letter) {
-      // letterBox.innerText = "letter"
-      // console.log(letter);
+    if (singleLetter == letter) {
+      blankLetters.style.fontsize = "20px";
     } else {
-      wrongLetters.unshift(singleLetter[0]);
-      console.log(wrongLetters);
+      wrongLetters.add(singleLetter);
+      value = "";
+      for (item of wrongLetters.values()) {
+        value += item + " ";
+      }
+      incorrectAnswer.innerText = value;
     }
   });
+  input.value = "";
 }
+
+// let values = wrongLetters.values();
+// print out different letters
+
+// put array in div box of wrong letters
