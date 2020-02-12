@@ -23,8 +23,6 @@ console.log(wordInPlay);
 // chosen word turned into hyphens
 let wordLength = wordInPlay.length;
 console.log(wordLength);
-// // displays underscore amount based on length of the word
-// // displayedHiddenWord = [];
 
 function blankDivs() {
   for (let i = 0; i < wordLength; i++) {
@@ -43,39 +41,10 @@ blankDivs();
 // border bottom to divs created in order to display the underscore for the letters
 // find div to corresoping letter and then add that letter to div
 
-// characters to choose from for comparison
-// let letters = [
-//   "a",
-//   "b",
-//   "c",
-//   "d",
-//   "e",
-//   "f",
-//   "g",
-//   "h",
-//   "i",
-//   "j",
-//   "k",
-//   "l",
-//   "m",
-//   "n",
-//   "o",
-//   "p",
-//   "q",
-//   "r",
-//   "s",
-//   "t",
-//   "u",
-//   "v",
-//   "w",
-//   "x",
-//   "y",
-//   "z"
-// ];
 // chosen letter from letters array
 let singleLetter;
 // wrong letters chosen get pushed to the wrong letters array and then displayed in html
-
+// this is so that when a wrong letter is placed in box it does not get placed more than once
 let wrongLetters = new Set();
 
 // when you hit submit you input what you typed in into the innerHTML of the
@@ -97,11 +66,15 @@ function submitLetter(e) {
       input.value = "";
       correctLetter = true;
     } else if (i == blankLetters.length - 1 && correctLetter == false) {
+      //this is so that the last inputted letter is then placed in the correct box
+
       wrongLetters.add(singleLetter);
       value = "";
+      // this allows the values of set object to be shown
       for (item of wrongLetters.values()) {
         value += item + " ";
       }
+      //
       incorrectAnswer.innerText = value;
       input.value = "";
     }
