@@ -6,32 +6,35 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Neucha&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Tomorrow&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class="grid-container">
-            <div class="header">
-                <h1>Hangman</h1>
-            </div>
-            <div class="main">
-                <div class="letter-container">
-                    
-                </div>
+        <div class="header">
+                <h1>HANGMAN</h1>
+        </div>
+        <div class="main">
+            <div class="letter-container"></div>
+            <div class="answers">
                 <div class="wrong-letter">
-                    <h1>WRONG!</h1>
+                    <h1 id="h1-title">WRONG LETTERS</h1>
                     <div class="wrong-letter-container"></div>
-                </div>
+                </div>  
+                <div class="guesses-left">
+                    <h1 id="guess-h1">GUESSES LEFT</h1>
+                    <div class="guess-counter"></div>
+                </div> 
+            </div>     
+            <div class="submit-input">
                 <form action=""> 
                     <input class="input" type="text">
-                <button>SUBMIT</button>
+                    <button>SUBMIT</button> 
                 </form>
             </div>
-            <div class="footer">
-                <ul>
-                    <li>Andrew Frazier</li>
-                    <li>Good Luck</li>
-                    <li>General Assembly</li>
-                </ul>
-            </div>
+        </div>
+        <div class="footer">
+                    <h3 class="footer-info">Andrew Frazier</h3>
+                    <h3 class="footer-info">General Assembly</h3>
         </div>
         <script src="function.js" async defer></script>
     </body>

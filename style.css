@@ -1,39 +1,76 @@
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 15vh 66vh 15vh;
+body {
+  background-image: url("https://images.unsplash.com/photo-1545199040-e144651a428d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1651&q=80  ");
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
 }
 
 .header {
-  grid-row-start: 1;
-  /* border: solid black 2px; */
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  color: white;
   display: flex;
   justify-content: center;
+  background-color: black;
+  align-items: center;
+  height: 50px;
+  opacity: 0.7;
+}
+
+.header h1 {
+  font-size: 20px;
+  letter-spacing: 10px;
+  font-family: "Tomorrow", sans-serif;
 }
 
 .main {
-  grid-row-start: 2;
   display: flex;
   flex-direction: column;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
 }
 
 .footer {
-  grid-row-start: 3;
-  /* border: solid black 2px; */
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  opacity: 0.7;
+  color: white;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  height: 50px;
+}
+
+h3 {
+  font-size: 15px;
+  margin: 15px;
+  font-family: "Tomorrow", sans-serif;
+}
+
+input {
+  background-color: black;
+  color: white;
 }
 
 button {
-  height: 20px;
+  height: 40px;
   width: 60px;
   border-radius: 90%;
+  background-color: black;
+  color: white;
 }
 
 .letter-container {
-  border: black solid 2px;
+  /* border: white solid 2px; */
   height: 200px;
   width: 100%;
   display: flex;
@@ -42,39 +79,77 @@ button {
 }
 
 .wrong-letter {
-  border: black solid 2px;
-  height: 200px;
-  width: 300px;
   padding: 0;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  width: 50%;
+}
+
+.guesses-left {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  width: 50%;
+}
+
+.guess-counter {
+  height: 100px;
+  width: 400px;
+  color: white;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.guesses-left h1 {
+  font-size: 20px;
+  color: white;
+  opacity: 0;
+  font-family: "Tomorrow", sans-serif;
+}
+
+.answers {
+  /* border: solid white 2px; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
   align-items: center;
 }
 
 .wrong-letter h1 {
-  font-size: 10px;
+  font-size: 20px;
+  color: white;
+  opacity: 0;
+  font-family: "Tomorrow", sans-serif;
 }
+
 .wrong-letter-container {
-  border: black solid 2px;
+  /* border: white solid 2px; */
   height: 100px;
-  width: 200px;
+  width: 400px;
+  color: white;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .blank-style {
-  border-bottom: 2px solid black;
-  height: 20px;
-  width: 20px;
+  border-bottom: 2px solid white;
+  height: 50px;
+  width: 50px;
   margin: 8px;
   text-align: center;
   font-size: 0px;
-}
-
-.winner {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  font-size: 100px;
-  color: red;
+  color: white;
+  font-family: "Neucha", cursive;
 }
 
 canvas {
