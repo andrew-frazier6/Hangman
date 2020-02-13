@@ -62,7 +62,7 @@ let correctLetter = false;
 function submitLetter(e) {
   // -->> THIS RUNS EVERYTIME YOU CLICK THE BUTTON.
   e.preventDefault(); // --> PREVENTS REFRESH.
-  singleLetter = input.value;
+  singleLetter = input.value[0];
   correctLetter = false;
   console.log(singleLetter);
 
