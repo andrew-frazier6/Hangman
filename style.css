@@ -68,3 +68,11 @@ button {
   text-align: center;
   font-size: 0px;
 }
+
+.winner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 100px;
+  color: red;
+}
