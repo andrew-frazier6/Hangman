@@ -76,6 +76,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1000;
 }
 
 .wrong-letter {
@@ -151,7 +152,6 @@ button {
   color: white;
   font-family: "Neucha", cursive;
 }
-
 canvas {
   position: absolute;
   top: 0;
