@@ -154,6 +154,9 @@ let correctLetter = false;
 function submitLetter(e) {
   // -->> THIS RUNS EVERYTIME YOU CLICK THE BUTTON.
   e.preventDefault(); // --> PREVENTS REFRESH.
+  if (input.value.length == 0) {
+    return;
+  }
   singleLetter = input.value[0];
   correctLetter = false;
   console.log(singleLetter);
@@ -192,7 +195,7 @@ function submitLetter(e) {
 
 const loser = () => {
   if (counter === 0) {
-    alert("you lose");
+    alert("YOU LOSE");
   }
 };
 
