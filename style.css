@@ -1,3 +1,8 @@
+:root {
+  height: 100%;
+  width: 100%;
+}
+
 body {
   background-image: url("https://images.unsplash.com/photo-1545199040-e144651a428d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1651&q=80  ");
   margin: 0;
@@ -32,9 +37,9 @@ body {
   flex-direction: column;
   height: 100%;
   width: 100%;
+  margin: 0 auto;
   justify-content: center;
   align-items: center;
-  margin-bottom: 1px;
 }
 
 .footer {
@@ -42,7 +47,6 @@ body {
   left: 0;
   bottom: 0;
   width: 100%;
-  margin-top: 1px;
   background-color: black;
   opacity: 0.7;
   color: white;
@@ -124,6 +128,7 @@ button {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  width: 50%;
 }
 
 .wrong-letter h1 {
@@ -157,6 +162,11 @@ button {
 
 .submit-input {
   z-index: 1000;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1px;
 }
 
 canvas {
@@ -192,124 +202,4 @@ canvas {
 #submit-button:hover {
   background-color: white;
   color: black;
-}
-/* responsiveness */
-@media screen and (max-width: 575.98px) {
-  .header {
-    width: 100%;
-    margin-bottom: 1px;
-    position: relative;
-  }
-  .footer {
-    width: 100%;
-    margin-top: 1px;
-  }
-  .letter-container {
-    width: 100vw;
-  }
-  .answers {
-    width: 100vw;
-  }
-  .letter-container {
-    margin-top: 1px;
-  }
-  .answers {
-    margin: 1px;
-  }
-}
-
-@media screen and (min-width: 576px) and (max-width: 767.98px) {
-  .header {
-    width: 100%;
-    margin-bottom: 1px;
-    position: relative;
-  }
-  .footer {
-    width: 100%;
-    margin-top: 1px;
-  }
-  .letter-container {
-    width: 100vw;
-  }
-  .answers {
-    width: 100vw;
-  }
-  .letter-container {
-    margin-top: 1px;
-  }
-  .answers {
-    margin: 1px;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 991.98px) {
-  .header {
-    width: 100%;
-    margin-bottom: 1px;
-    position: relative;
-  }
-  .footer {
-    width: 100%;
-    margin-top: 1px;
-  }
-  .letter-container {
-    width: 100vw;
-  }
-  .answers {
-    width: 100vw;
-  }
-  .letter-container {
-    margin-top: 1px;
-  }
-  .answers {
-    margin: 1px;
-  }
-}
-
-@media screen and (min-width: 992px) and (max-width: 1199.98px) {
-  .header {
-    width: 100%;
-    margin-bottom: 1px;
-    position: relative;
-  }
-  .footer {
-    width: 100%;
-    margin-top: 1px;
-  }
-  .letter-container {
-    width: 100vw;
-  }
-  .answers {
-    width: 100vw;
-  }
-  .letter-container {
-    margin-top: 1px;
-  }
-  .answers {
-    margin: 1px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .header {
-    width: 100%;
-    margin-bottom: 1px;
-    position: relative;
-  }
-  .footer {
-    width: 100%;
-    margin-top: 1px;
-  }
-  .letter-container {
-    width: 100vw;
-  }
-  .answers {
-    width: 100vw;
-  }
-  .letter-container {
-    margin-top: 1px;
-  }
-  .answers {
-    margin: 1px;
-  }
 }
