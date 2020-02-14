@@ -195,7 +195,7 @@ function submitLetter(e) {
 
 const loser = () => {
   if (counter === 0) {
-    alert("YOU LOSE");
+    alert("YOURE ALL OUT OF GUESSES! Better luck next time.");
   }
 };
 
