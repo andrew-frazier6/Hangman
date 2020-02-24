@@ -1,6 +1,6 @@
 # Project #4
 
-- First full game
+- Play the game https://andrew-frazier6.github.io/project-4-hangman/
 
 ## Description
 
