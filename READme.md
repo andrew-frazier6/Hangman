@@ -1,6 +1,6 @@
 # HANGMAN
 
-- Play the game https://andrew-frazier6.github.io/project-4-hangman/
+- Play the game https://andrew-frazier6.github.io/Hangman/
 
 ## ABOUT
 
