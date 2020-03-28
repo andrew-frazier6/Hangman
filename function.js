@@ -209,13 +209,14 @@ const wordBankValidator = (word, answered) => {
     fireworksComponent();
   }
 };
+blankDivs();
 
-let start = document.getElementById("start-button");
-start.addEventListener("click", startGame);
-function startGame() {
-  blankDivs();
-  start.remove();
-}
+// let start = document.getElementById("start-button");
+// start.addEventListener("click", startGame);
+// function startGame() {
+//   blankDivs();
+//   start.remove();
+// }
 
 let reset = document.getElementById("reset-button");
 reset.addEventListener("click", resetGame);
