@@ -209,7 +209,6 @@ const wordBankValidator = (word, answered) => {
     fireworksComponent();
   }
 };
-blankDivs();
 
 // let start = document.getElementById("start-button");
 // start.addEventListener("click", startGame);
@@ -223,3 +222,4 @@ reset.addEventListener("click", resetGame);
 function resetGame() {
   blankDivs();
 }
+blankDivs();
