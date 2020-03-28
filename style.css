@@ -180,10 +180,10 @@ canvas {
   cursor: pointer;
 }
 
-#start-button:hover {
+/* #start-button:hover {
   background-color: white;
   color: black;
-}
+} */
 
 #reset-button {
   cursor: pointer;
