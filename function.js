@@ -8,7 +8,6 @@ let guessTitle = document.querySelector("#guess-h1");
 let guessCounter = document.querySelector(".guess-counter");
 let counter = 10;
 
-// random word chosen
 let randomWords = [
   "revaluation",
   "errands",
@@ -112,15 +111,11 @@ let randomWords = [
   "dinkies",
 ];
 
-// the word that was chosen
-// let wordInPlay = [];
 var randomItem = randomWords[Math.floor(Math.random() * randomWords.length)];
-// the splitting of the chosen word into an array
+
 wordInPlay = randomItem.split("");
-console.log(wordInPlay);
-// chosen word turned into hyphens
+
 let wordLength = wordInPlay.length;
-console.log(wordLength);
 
 function blankDivs() {
   for (let i = 0; i < wordLength; i++) {
@@ -135,25 +130,17 @@ function blankDivs() {
   }
 }
 
-// border bottom to divs created in order to display the underscore for the letters
-// find div to corresoping letter and then add that letter to div
-
-// chosen letter from letters array
 let singleLetter;
-// wrong letters chosen get pushed to the wrong letters array and then displayed in html
-// this is so that when a wrong letter is placed in box it does not get placed more than once
+
 let wrongLetters = new Set();
 
-// when you hit submit you input what you typed in into the innerHTML of the
-// div box
 let value;
 let item;
 submit.addEventListener("click", submitLetter);
 let correctLetter = false;
 
 function submitLetter(e) {
-  // -->> THIS RUNS EVERYTIME YOU CLICK THE BUTTON.
-  e.preventDefault(); // --> PREVENTS REFRESH.
+  e.preventDefault();
   if (input.value.length == 0) {
     return;
   }
@@ -169,9 +156,7 @@ function submitLetter(e) {
       input.value = "";
       correctLetter = true;
       wordBankValidator(blankLetters, document.querySelectorAll(".correct"));
-      //
     } else if (i == blankLetters.length - 1 && correctLetter == false) {
-      //this is so that the last inputted letter is then placed in the correct box
       wrongBox.style.opacity = "1";
       guessTitle.style.opacity = "1";
       counter -= 1;
@@ -181,7 +166,6 @@ function submitLetter(e) {
       loser();
       value = "";
 
-      // this allows the values of set object to be shown
       for (item of wrongLetters.values()) {
         value += item + " ";
       }
@@ -191,15 +175,18 @@ function submitLetter(e) {
   });
 }
 //
+console.log(wordInPlay);
 
 const loser = () => {
   if (counter === 0) {
-    alert("YOURE ALL OUT OF GUESSES! Better luck next time.");
+    losingWord = wordInPlay.join("");
+    alert(
+      `Im sorry! You are all out of guesses! The word was "${losingWord}". Better luck next time.`
+    );
   }
 };
 
 const wordBankValidator = (word, answered) => {
-  // --> word: array of the word
   if (word.length === answered.length) {
     input.remove();
     submitButton.remove();
@@ -208,13 +195,6 @@ const wordBankValidator = (word, answered) => {
     fireworksComponent();
   }
 };
-
-// let start = document.getElementById("start-button");
-// start.addEventListener("click", startGame);
-// function startGame() {
-//   blankDivs();
-//   start.remove();
-// }
 
 let reset = document.getElementById("reset-button");
 reset.addEventListener("click", resetGame);
