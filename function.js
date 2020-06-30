@@ -109,7 +109,7 @@ let randomWords = [
   "simpleness",
   "pressgang",
   "sileni",
-  "dinkies"
+  "dinkies",
 ];
 
 // the word that was chosen
@@ -162,7 +162,6 @@ function submitLetter(e) {
   console.log(singleLetter);
 
   blankLetters.forEach((letter, i) => {
-    // console.dir(letter);
     if (singleLetter == letter.innerText) {
       letter.style.fontSize = "40px";
       letter.classList.add("correct");
