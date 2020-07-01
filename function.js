@@ -212,7 +212,11 @@ blankDivs();
 
 function isNumberKey(evt) {
   var charCode = evt.which ? evt.which : evt.keyCode;
-  if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123)) {
+  if (
+    (charCode > 64 && charCode < 91) ||
+    (charCode > 96 && charCode < 123) ||
+    charCode === 13
+  ) {
     return true;
   } else {
     return false;
