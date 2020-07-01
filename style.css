@@ -268,41 +268,21 @@ mdl-button:hover {
 /* Modal Content/Box */
 .modal-content {
   background-color: #000000;
-  margin: 1% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  margin: 0.5% auto 1% auto; /* 5% from the top, 15% from the bottom and centered */
   color: white;
   border-radius: 10px;
   border: 1px solid rgb(15, 15, 15);
   width: 50%;
-  height: auto; /* Could be more or less, depending on screen size */
+  height: auto;
+  font-size: 1.2rem;
+  /* font-style: "Lato"; */
+  font-weight: 200;
 }
 
 /* Style the horizontal ruler */
 hr {
   border: 1px solid #f1f1f1;
   margin-bottom: 25px;
-}
-
-/* The Modal Close Button (x) */
-.close {
-  position: absolute;
-  right: 35px;
-  top: 15px;
-  font-size: 40px;
-  font-weight: bold;
-  color: #f1f1f1;
-}
-
-.close:hover,
-.close:focus {
-  color: #f44336;
-  cursor: pointer;
-}
-
-/* Clear floats */
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
 }
 
 /* Change styles for cancel button and delete button on extra small screens */
