@@ -177,12 +177,29 @@ function submitLetter(e) {
 //
 console.log(wordInPlay);
 
+modal2 = document.getElementById("id01");
+
+// var modal = document.getElementById("myModal");
+// var span = document.getElementsByClassName("close")[0];
+// console.log(span);
+// function openModal() {
+//   modal.style.display = "block";
+// }
+// function closeModal() {
+//   console.log("hello");
+//   modal.style.display = "none";
+// }
+function showTheLosingWord() {
+  losingWord = wordInPlay.join("");
+  document.getElementById("myText").innerHTML = losingWord;
+}
+
 const loser = () => {
   if (counter === 0) {
     losingWord = wordInPlay.join("");
-    alert(
-      `Im sorry! You are all out of guesses! The word was "${losingWord}". Better luck next time.`
-    );
+    showTheLosingWord();
+    modal2.style.display = "block";
+    modal2.style.backgroundColor = "#474e5d";
   }
 };
 
