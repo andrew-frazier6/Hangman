@@ -179,16 +179,6 @@ console.log(wordInPlay);
 
 modal2 = document.getElementById("id01");
 
-// var modal = document.getElementById("myModal");
-// var span = document.getElementsByClassName("close")[0];
-// console.log(span);
-// function openModal() {
-//   modal.style.display = "block";
-// }
-// function closeModal() {
-//   console.log("hello");
-//   modal.style.display = "none";
-// }
 function showTheLosingWord() {
   losingWord = wordInPlay.join("");
   document.getElementById("myText").innerHTML = losingWord;
@@ -219,3 +209,14 @@ function resetGame() {
   blankDivs();
 }
 blankDivs();
+
+function isNumberKey(evt) {
+  var charCode = evt.which ? evt.which : evt.keyCode;
+  if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.dir(isNumberKey);
