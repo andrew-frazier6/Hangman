@@ -255,9 +255,11 @@ mdl-button:hover {
   border: 1px solid rgb(15, 15, 15);
   width: 50%;
   height: auto;
+  max-height: 300px;
   font-size: 1.2rem;
   /* font-style: "Lato"; */
   font-weight: 200;
+  overflow: hidden;
 }
 
 /* Style the horizontal ruler */
@@ -283,6 +285,9 @@ hr {
   }
   .wrong-letter h1 {
     word-spacing: 1px;
+  }
+  .modal-content {
+    font-size: 1rem;
   }
 }
 

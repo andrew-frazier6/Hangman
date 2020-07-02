@@ -17,7 +17,6 @@ let randomWords = [
   "silk",
   "gaited",
   "pigmy",
-  "stridulatory",
   "affricated",
   "quite",
   "ceilidhs",
@@ -27,7 +26,6 @@ let randomWords = [
   "isoglosses",
   "punto",
   "clutched",
-  "parthenocarpies",
   "reviewers",
   "stewarding",
   "melamine",
@@ -68,13 +66,11 @@ let randomWords = [
   "partyers",
   "nonowner",
   "perfumed",
-  "mycologically",
   "determined",
   "frugivore",
   "yelling",
   "passport",
   "hemostases",
-  "preestablishing",
   "unitedly",
   "pollex",
   "fallfish",
@@ -85,7 +81,6 @@ let randomWords = [
   "humanly",
   "irised",
   "amentia",
-  "anelasticities",
   "gelating",
   "amyloplast",
   "sykes",
@@ -178,6 +173,7 @@ function submitLetter(e) {
 console.log(wordInPlay);
 
 modal2 = document.getElementById("id01");
+removeBlanks = document.querySelector(".letter-container");
 
 function showTheLosingWord() {
   losingWord = wordInPlay.join("");
@@ -190,6 +186,7 @@ const loser = () => {
     showTheLosingWord();
     modal2.style.display = "block";
     modal2.style.backgroundColor = "#474e5d";
+    removeBlanks.style.display = "none";
   }
 };
 
