@@ -222,5 +222,3 @@ function isNumberKey(evt) {
     return false;
   }
 }
-
-console.dir(isNumberKey);
